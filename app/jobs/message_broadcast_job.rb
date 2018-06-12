@@ -24,7 +24,8 @@ class MessageBroadcastJob < ApplicationJob
       "conversations-#{user.id}",
       window: render_window(message.conversation, user),
       message: render_message(message, user),
-      conversation_id: message.conversation_id
+      conversation_id: message.conversation_id,
+      alert: 1
     )
   end
 

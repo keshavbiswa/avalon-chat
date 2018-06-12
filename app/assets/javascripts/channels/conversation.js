@@ -3,7 +3,10 @@ App.conversation = App.cable.subscriptions.create("ConversationChannel", {
   disconnected: function() {},
   received: function(data) {
     var conversation = $('#conversations-list').find("[data-conversation-id='" + data['conversation_id'] + "']");
-    console.log(data);
+    if(data['alert'] === 1){
+      document.getElementById('alarm').play();
+      alert("You have a message!")
+    }
     if (data['window'] !== undefined) {
       var conversation_visible = conversation.is(':visible');
  
@@ -16,8 +19,6 @@ App.conversation = App.cable.subscriptions.create("ConversationChannel", {
         conversation.find('.messages-list').find('ul').append(data['message']);
       }
       else {
-        document.getElementById('alarm').play();
-        alert("You have a message!")
         $('#conversations-list').append(data['window']);
         conversation = $('#conversations-list').find("[data-conversation-id='" + data['conversation_id'] + "']");
         conversation.find('.card-body').toggle();
