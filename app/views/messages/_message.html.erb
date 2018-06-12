@@ -1,7 +1,10 @@
-<li class="list-group-item">
+<li class="list-group-item ">
   <div class="row">
-    <div class="<%= user.id == message.user_id ? 'message-sent ml-auto' : 'message-received' %>">
-      <%= message.body %>
+    <div class="justify-content-between <%= user.id == message.user_id ? 'message-sent ml-auto' : 'message-received' %>">
+      <h5 class="mb-1"><%= message.body %></h5>
+      <small>
+        <%= distance_of_time_in_words(DateTime.now,message.created_at) %> ago
+      </small>
     </div>
   </div>
 </li>
