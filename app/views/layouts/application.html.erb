@@ -11,6 +11,9 @@
       <%= render 'shared/navbar'%>
       <%= render 'shared/notifications'%>
       <%= render 'shared/jumbotron'%>
+      <% unless current_user.is_a?(GuestUser) %>
+        <h1>Hello <%= current_user.first_name %> </h1>
+      <% end %>
       <%= yield %>
     </div>
   </body>
