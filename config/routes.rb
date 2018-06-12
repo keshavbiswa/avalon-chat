@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       post :close
     end
   end
+  mount ActionCable.server => '/cable'
 end
