@@ -2,7 +2,9 @@
   <div class="card card-default" data-conversation-id="<%= conversation.id %>">
     <div class="card-header">
       <%= link_to conversation.opposed_user(user).email, '', class: 'toggle-window' %>
-      <%= link_to "X", close_conversation_path(conversation), class: "btn btn-secondary btn-xs ml-auto", remote: true, method: :post %>
+      <span class="pull-right">
+        <%= link_to "X", close_conversation_path(conversation), class: "btn btn-secondary", remote: true, method: :post %>
+      </span>
     </div>
 
     <div class="card-body" style="display: none;">
