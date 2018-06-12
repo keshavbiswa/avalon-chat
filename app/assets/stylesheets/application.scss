@@ -14,7 +14,6 @@
   overflow-x: hidden;
 }
 
-
 .message-sent {
   position: relative;
   background-color: #D9EDF7;
@@ -24,7 +23,6 @@
   float: right;
 }
 
-
 .message-received {
   background-color: #F1F0F0;
   border-color: #EEEEEE;
@@ -32,3 +30,9 @@
   padding: 10px;
   float: left;
 }
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none; 
+ }
