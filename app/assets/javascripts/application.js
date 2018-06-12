@@ -1,5 +1,7 @@
 //= require jquery
 //= require jquery_ujs
+//= require lib/typed
+//= require typed-implementation
 //= require_tree .
 
 (function() {
