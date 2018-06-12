@@ -2,18 +2,11 @@
  *= require_tree .
  *= require_self
  */
-
- @import "bootstrap-sprockets";
- @import "bootstrap";
+ @import "bootstrap-theme";
 
  /*
  * Custom Styles
  */
- 
- ul {
-  padding-left: 0px;
-  list-style: none;
-}
 
 .messages-list {
   max-height: 200px;

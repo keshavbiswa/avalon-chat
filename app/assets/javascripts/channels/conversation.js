@@ -8,10 +8,10 @@ App.conversation = App.cable.subscriptions.create("ConversationChannel", {
       var conversation_visible = conversation.is(':visible');
  
       if (conversation_visible) {
-        var messages_visible = (conversation).find('.panel-body').is(':visible');
+        var messages_visible = (conversation).find('.card-body').is(':visible');
  
         if (!messages_visible) {
-          conversation.removeClass('panel-default').addClass('panel-success');
+          conversation.removeClass('card-default').addClass('card-success');
         }
         conversation.find('.messages-list').find('ul').append(data['message']);
       }

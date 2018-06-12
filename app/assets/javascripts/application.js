@@ -5,13 +5,13 @@
 (function() {
   $(document).on('click', '.toggle-window', function(e) {
     e.preventDefault();
-    var panel = $(this).parent().parent();
-    var messages_list = panel.find('.messages-list');
+    var card = $(this).parent().parent();
+    var messages_list = card.find('.messages-list');
  
-    panel.find('.panel-body').toggle();
-    panel.attr('class', 'panel panel-default');
+    card.find('.card-body').toggle();
+    card.attr('class', 'card card-default');
  
-    if (panel.find('.panel-body').is(':visible')) {
+    if (card.find('.card-body').is(':visible')) {
       var height = messages_list[0].scrollHeight;
       messages_list.scrollTop(height);
     }

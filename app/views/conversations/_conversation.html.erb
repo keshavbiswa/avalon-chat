@@ -1,13 +1,13 @@
-<li>
-  <div class="panel panel-default" data-conversation-id="<%= conversation.id %>">
-    <div class="panel-heading">
+<li class="list-group-item">
+  <div class="card card-default" data-conversation-id="<%= conversation.id %>">
+    <div class="card-header">
       <%= link_to conversation.opposed_user(user).email, '', class: 'toggle-window' %>
-      <%= link_to "x", close_conversation_path(conversation), class: "btn btn-default btn-xs pull-right", remote: true, method: :post %>
+      <%= link_to "X", close_conversation_path(conversation), class: "btn btn-secondary btn-xs ml-auto", remote: true, method: :post %>
     </div>
 
-    <div class="panel-body" style="display: none;">
+    <div class="card-body" style="display: none;">
       <div class="messages-list">
-        <ul>
+        <ul class="list-group">
           <%= render 'conversations/conversation_content', messages: conversation.messages, user: user %>
         </ul>
       </div>
