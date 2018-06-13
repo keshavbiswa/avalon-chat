@@ -15,20 +15,19 @@
 }
 
 .message-sent {
-  position: relative;
   background-color: #D9EDF7;
   border-color: #BCE8F1;
+  box-shadow: 5px 5px #d4d5d8;
   margin: 5px 20px;
   padding: 10px;
-  float: right;
 }
 
 .message-received {
   background-color: #F1F0F0;
   border-color: #EEEEEE;
+  box-shadow: 5px 5px #d4d5d8;
   margin: 5px 20px;
   padding: 10px;
-  float: left;
 }
 
 .login > .card {
